@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Office Tools Kit - 开源办公效率工具集</title>
-    <meta name="description" content="免费开源的办公效率工具集：Excel合并拆分、PDF合并、图片处理、文本清理、JSON工具等。支持pip一键安装。">
-    <meta name="keywords" content="excel合并, excel拆分, pdf合并, 图片转换, 二维码, json工具, markdown, python工具">
+    <meta name="description" content="免费开源的办公效率工具集：Excel合并拆分、PDF合并、图片处理、文本清理、CSV处理、批量重命名、重复文件查找等。支持pip一键安装。">
+    <meta name="keywords" content="excel合并, excel拆分, pdf合并, 图片转换, 二维码, json工具, csv处理, 批量重命名, 查重, python工具">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f7; color: #1d1d1f; line-height: 1.6; }
@@ -15,15 +15,18 @@
         header p { font-size: 1.2em; color: #6e6e73; margin-top: 10px; }
         .install-box { background: #fff; border-radius: 16px; padding: 24px; text-align: center; margin: 30px 0; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
         .install-box code { background: #f0f0f5; padding: 12px 24px; border-radius: 8px; font-size: 1.1em; display: inline-block; }
-        .install-box .btn { display: inline-block; margin-left: 12px; padding: 12px 24px; background: #667eea; color: #fff; border-radius: 8px; text-decoration: none; font-weight: 500; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin: 40px 0; }
+        .badge { display: inline-block; margin-top: 10px; font-size: 0.85em; color: #6e6e73; }
+        .badge a { color: #667eea; text-decoration: none; }
+        .section-title { font-size: 1.6em; margin: 40px 0 20px; text-align: center; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin: 20px 0; }
         .card { background: #fff; border-radius: 16px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
         .card:hover { transform: translateY(-4px); }
         .card h3 { font-size: 1.2em; margin-bottom: 8px; }
-        .card .cmd { background: #f0f0f5; padding: 6px 12px; border-radius: 6px; font-size: 0.85em; display: inline-block; margin: 8px 0; font-family: monospace; }
-        .card p { color: #6e6e73; font-size: 0.9em; }
-        .card .links { margin-top: 12px; }
+        .card .cmd { background: #f0f0f5; padding: 6px 12px; border-radius: 6px; font-size: 0.8em; display: inline-block; margin: 8px 0; font-family: monospace; }
+        .card p { color: #6e6e73; font-size: 0.9em; margin: 6px 0; }
+        .card .links { margin-top: 10px; }
         .card .links a { color: #667eea; text-decoration: none; font-size: 0.85em; margin-right: 12px; }
+        .card .new-badge { background: #ff6b6b; color: #fff; font-size: 0.7em; padding: 2px 8px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
         .donate { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border-radius: 16px; padding: 32px; text-align: center; margin: 40px 0; }
         .donate h2 { font-size: 1.5em; margin-bottom: 12px; }
         .donate .addr { font-family: monospace; font-size: 0.9em; background: rgba(255,255,255,0.15); padding: 12px 20px; border-radius: 8px; display: inline-block; word-break: break-all; margin-top: 8px; }
@@ -41,75 +44,85 @@
 
     <div class="install-box">
         <code>pip install office-tools-kit</code>
-        <a class="btn" href="https://github.com/BoiledSaltedDuck/office-tools-kit">GitHub ⭐</a>
+        <div class="badge">
+            📦 12个工具包 · ⭐ <a href="https://github.com/BoiledSaltedDuck">@BoiledSaltedDuck</a> · 
+            <a href="https://pypi.org/user/BoiledSaltedDuck/">PyPI</a>
+        </div>
     </div>
 
+    <h2 class="section-title">📋 全部工具</h2>
     <div class="grid">
         <div class="card">
-            <h3>📊 excel-merge</h3>
+            <h3>📊 Excel合并拆分</h3>
             <div class="cmd">pip install office-tools-kit</div>
-            <p>合并多个Excel文件为一个</p>
-            <div class="links"><a href="https://pypi.org/project/office-tools-kit/">PyPI</a></div>
+            <p>excel-merge / excel-split / pdf-merge</p>
+            <div class="links"><a href="https://pypi.org/project/office-tools-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/office-tools-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>✂️ excel-split</h3>
-            <div class="cmd">pip install office-tools-kit</div>
-            <p>按列拆分Excel为多个文件</p>
-            <div class="links"><a href="https://pypi.org/project/office-tools-kit/">PyPI</a></div>
-        </div>
-        <div class="card">
-            <h3>📄 pdf-merge</h3>
-            <div class="cmd">pip install office-tools-kit</div>
-            <p>合并多个PDF文件</p>
-            <div class="links"><a href="https://pypi.org/project/office-tools-kit/">PyPI</a></div>
-        </div>
-        <div class="card">
-            <h3>🖼️ img-convert</h3>
+            <h3>🖼️ 图片格式转换</h3>
             <div class="cmd">pip install img-convert-kit</div>
-            <p>图片格式批量转换</p>
+            <p>img-convert — 批量转换图片格式</p>
             <div class="links"><a href="https://pypi.org/project/img-convert-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/img-convert-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>📏 img-resize</h3>
+            <h3>📏 图片缩放压缩</h3>
             <div class="cmd">pip install img-resize-kit</div>
-            <p>图片批量缩放压缩</p>
+            <p>img-resize — 批量缩放尺寸、压缩质量</p>
             <div class="links"><a href="https://pypi.org/project/img-resize-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/img-resize-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>📁 file-org</h3>
+            <h3>📁 文件自动整理</h3>
             <div class="cmd">pip install file-org-kit</div>
-            <p>文件自动分类整理</p>
+            <p>file-org — 按类型/日期自动分类</p>
             <div class="links"><a href="https://pypi.org/project/file-org-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/file-org-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>🧹 text-clean</h3>
-            <div class="cmd">pip install text-clean-kit</div>
-            <p>文本去重清理格式化</p>
-            <div class="links"><a href="https://pypi.org/project/text-clean-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/text-clean-kit">GitHub</a></div>
-        </div>
-        <div class="card">
-            <h3>🔲 qr-code</h3>
+            <h3>🔲 二维码工具</h3>
             <div class="cmd">pip install qr-code-kit</div>
-            <p>二维码生成与识别</p>
+            <p>qr-code — 生成/识别二维码</p>
             <div class="links"><a href="https://pypi.org/project/qr-code-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/qr-code-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>📐 unit-convert</h3>
+            <h3>🧹 文本清理</h3>
+            <div class="cmd">pip install text-clean-kit</div>
+            <p>text-clean — 去重/去空行/格式化</p>
+            <div class="links"><a href="https://pypi.org/project/text-clean-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/text-clean-kit">GitHub</a></div>
+        </div>
+        <div class="card">
+            <h3>🔧 JSON处理</h3>
+            <div class="cmd">pip install json-tool-kit</div>
+            <p>json-tool — 格式化/验证/合并/提取</p>
+            <div class="links"><a href="https://pypi.org/project/json-tool-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/json-tool-kit">GitHub</a></div>
+        </div>
+        <div class="card">
+            <h3>📐 单位换算</h3>
             <div class="cmd">pip install unit-convert-kit</div>
-            <p>单位换算（长度/重量/温度等）</p>
+            <p>unit-convert — 长度/重量/温度/数据</p>
             <div class="links"><a href="https://pypi.org/project/unit-convert-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/unit-convert-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>📝 markdown-kit</h3>
+            <h3>📝 Markdown辅助</h3>
             <div class="cmd">pip install markdown-kit</div>
-            <p>Markdown辅助工具</p>
+            <p>markdown-kit — CSV转表格/生成目录</p>
             <div class="links"><a href="https://pypi.org/project/markdown-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/markdown-kit">GitHub</a></div>
         </div>
         <div class="card">
-            <h3>🔧 json-tool</h3>
-            <div class="cmd">pip install json-tool-kit</div>
-            <p>JSON格式化/验证/合并</p>
-            <div class="links"><a href="https://pypi.org/project/json-tool-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/json-tool-kit">GitHub</a></div>
+            <h3>📊 CSV处理 <span class="new-badge">NEW</span></h3>
+            <div class="cmd">pip install csv-tool-kit</div>
+            <p>csv-tool — 合并/拆分/转JSON/去重</p>
+            <div class="links"><a href="https://pypi.org/project/csv-tool-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/csv-tool-kit">GitHub</a></div>
+        </div>
+        <div class="card">
+            <h3>✏️ 批量重命名 <span class="new-badge">NEW</span></h3>
+            <div class="cmd">pip install batch-rename-kit</div>
+            <p>batch-rename — 批量改名多种模式</p>
+            <div class="links"><a href="https://pypi.org/project/batch-rename-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/batch-rename-kit">GitHub</a></div>
+        </div>
+        <div class="card">
+            <h3>🔍 重复文件查找 <span class="new-badge">NEW</span></h3>
+            <div class="cmd">pip install find-duplicate-kit</div>
+            <p>find-duplicate — 按内容/名称/大小查重</p>
+            <div class="links"><a href="https://pypi.org/project/find-duplicate-kit/">PyPI</a> <a href="https://github.com/BoiledSaltedDuck/find-duplicate-kit">GitHub</a></div>
         </div>
     </div>
 
